@@ -1,4 +1,4 @@
-<div class="flex flex-row h-fit bg-(--secondary-color) text-white align-center items-center justify-between px-8">
+<div class="flex flex-row h-fit bg-secondary text-white align-center items-center justify-between px-8">
     <div class="">
         <img src="https://placehold.co/120x75" alt="">
     </div>
