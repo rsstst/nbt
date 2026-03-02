@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 // Model
-use App\Models\portfolioModel;
+use App\Models\portfolio;
 
 
 Route::get('/', function () {
@@ -24,7 +24,7 @@ Route::get('/portfolio', function () {
 
 // portfolio detail
 Route::get('/portfolio/it', function () {
-    return view('details.portfolio.it', ['title' => 'Portfolio IT', 'posts' => portfolioModel::all()]);
+    return view('details.portfolio.it', ['title' => 'Portfolio IT', 'posts' => portfolio::all()]);
 });
 Route::get('/portfolio/design', function () {
     return view('details.portfolio.design', ['title' => 'Portfolio Desain', 'posts' => [
@@ -33,8 +33,7 @@ Route::get('/portfolio/design', function () {
         ['id' => '6', 'title' => 'Project F', 'imgUrl' => 'Project F Image', 'description' => 'Deskripsi Project F', 'slug' => 'project-f'],
     ]]);
 });
-Route::get('/portfolio/it/{slug}', function ($slug) {
-    $post = portfolioModel::find($slug);
+Route::get('/portfolio/it/{post:slug}', function (portfolio $post) {
     return view('details.portfolio.it-detail', ['title' => 'Detail Portfolio IT', 'post' => $post]);
 });
 
