@@ -1,7 +1,11 @@
 <nav class="bg-secondary text-white">
     <div class="flex items-center justify-between px-8 py-4">
         <div class="shrink-0">
+<<<<<<< HEAD
             <img src="https://placehold.co/120x75" alt="Logo">
+=======
+            <img src="https://placehold.co/120x75/red/white?text=Logo+Placeholder" alt="Logo">
+>>>>>>> master
         </div>
 
         {{-- Desktop --}}

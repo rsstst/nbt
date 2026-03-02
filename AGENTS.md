@@ -12,19 +12,31 @@ This application is a Laravel application and its main Laravel ecosystems packag
 - php - 8.4.1
 - laravel/framework (LARAVEL) - v12
 - laravel/prompts (PROMPTS) - v0
+<<<<<<< HEAD
 - laravel/mcp (MCP) - v0
+=======
+- laravel/boost (BOOST) - v2
+- laravel/mcp (MCP) - v0
+- laravel/pail (PAIL) - v1
+>>>>>>> master
 - laravel/pint (PINT) - v1
 - laravel/sail (SAIL) - v1
 - pestphp/pest (PEST) - v4
 - phpunit/phpunit (PHPUNIT) - v12
+<<<<<<< HEAD
 - tailwindcss (TAILWINDCSS) - v4
+=======
+>>>>>>> master
 
 ## Skills Activation
 
 This project has domain-specific skills available. You MUST activate the relevant skill whenever you work in that domain—don't wait until you're stuck.
 
 - `pest-testing` — Tests applications using the Pest 4 PHP framework. Activates when writing tests, creating unit or feature tests, adding assertions, testing Livewire components, browser testing, debugging test failures, working with datasets or mocking; or when the user mentions test, spec, TDD, expects, assertion, coverage, or needs to verify functionality works.
+<<<<<<< HEAD
 - `tailwindcss-development` — Styles applications using Tailwind CSS v4 utilities. Activates when adding styles, restyling components, working with gradients, spacing, layout, flex, grid, responsive design, dark mode, colors, typography, or borders; or when the user mentions CSS, styling, classes, Tailwind, restyle, hero section, cards, buttons, or any visual/UI changes.
+=======
+>>>>>>> master
 
 ## Conventions
 
@@ -71,6 +83,10 @@ This project has domain-specific skills available. You MUST activate the relevan
 
 - You should use the `tinker` tool when you need to execute PHP to debug code or query Eloquent models directly.
 - Use the `database-query` tool when you only need to read from the database.
+<<<<<<< HEAD
+=======
+- Use the `database-schema` tool to inspect table structure before writing migrations or models.
+>>>>>>> master
 
 ## Reading Browser Logs With the `browser-logs` Tool
 
@@ -101,7 +117,11 @@ This project has domain-specific skills available. You MUST activate the relevan
 ## Constructors
 
 - Use PHP 8 constructor property promotion in `__construct()`.
+<<<<<<< HEAD
     - <code-snippet>public function __construct(public GitHub $github) { }</code-snippet>
+=======
+    - `public function __construct(public GitHub $github) { }`
+>>>>>>> master
 - Do not allow empty `__construct()` methods with zero parameters unless the constructor is private.
 
 ## Type Declarations
@@ -109,12 +129,21 @@ This project has domain-specific skills available. You MUST activate the relevan
 - Always use explicit return type declarations for methods and functions.
 - Use appropriate PHP type hints for method parameters.
 
+<<<<<<< HEAD
 <code-snippet name="Explicit Return Types and Method Params" lang="php">
+=======
+<!-- Explicit Return Types and Method Params -->
+```php
+>>>>>>> master
 protected function isAccessible(User $user, ?string $path = null): bool
 {
     ...
 }
+<<<<<<< HEAD
 </code-snippet>
+=======
+```
+>>>>>>> master
 
 ## Enums
 
@@ -212,7 +241,11 @@ protected function isAccessible(User $user, ?string $path = null): bool
 
 # Laravel Pint Code Formatter
 
+<<<<<<< HEAD
 - You must run `vendor/bin/pint --dirty --format agent` before finalizing changes to ensure your code matches the project's expected style.
+=======
+- If you have modified any PHP files, you must run `vendor/bin/pint --dirty --format agent` before finalizing changes to ensure your code matches the project's expected style.
+>>>>>>> master
 - Do not run `vendor/bin/pint --test --format agent`, simply run `vendor/bin/pint --format agent` to fix any formatting issues.
 
 === pest/core rules ===
@@ -225,6 +258,7 @@ protected function isAccessible(User $user, ?string $path = null): bool
 - CRITICAL: ALWAYS use `search-docs` tool for version-specific Pest documentation and updated code examples.
 - IMPORTANT: Activate `pest-testing` every time you're working with a Pest or testing-related task.
 
+<<<<<<< HEAD
 === tailwindcss/core rules ===
 
 # Tailwind CSS
@@ -232,4 +266,6 @@ protected function isAccessible(User $user, ?string $path = null): bool
 - Always use existing Tailwind conventions; check project patterns before adding new ones.
 - IMPORTANT: Always use `search-docs` tool for version-specific Tailwind CSS documentation and updated code examples. Never rely on training data.
 - IMPORTANT: Activate `tailwindcss-development` every time you're working with a Tailwind CSS or styling-related task.
+=======
+>>>>>>> master
 </laravel-boost-guidelines>

@@ -5,9 +5,16 @@
     "guidelines": true,
     "herd_mcp": false,
     "mcp": true,
+<<<<<<< HEAD
     "sail": false,
     "skills": [
         "pest-testing",
         "tailwindcss-development"
+=======
+    "nightwatch_mcp": false,
+    "sail": false,
+    "skills": [
+        "pest-testing"
+>>>>>>> master
     ]
 }
