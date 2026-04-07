@@ -12,6 +12,15 @@
     @include('layout.navbar')
     <div>
 
+    {{-- CTO / Banner / Carousel --}}
+
+    {{-- Portfolio --}}
+
+    {{-- Services --}}
+
+    {{-- About --}}
+
+    {{-- Contact --}}
     </div>
 </body>
 

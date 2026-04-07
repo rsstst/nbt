@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('portfolios', function (Blueprint $table) {
-            $table->id('post_id');
+        Schema::create('services_models', function (Blueprint $table) {
+            $table->id('postID');
             $table->string('title');
             $table->string('imgUrl');
             $table->text('description');
+            $table->enum('postType', ['IT', 'Design']);
             $table->string('slug')->unique();
             $table->timestamps();
         });
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('portfolios');
+        Schema::dropIfExists('services_models');
     }
 };

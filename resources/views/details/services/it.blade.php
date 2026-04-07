@@ -12,40 +12,19 @@
             </h1>
         </div>
 
-        <div class="flex flex-row flex-wrap items-center gap-4 justify-center border-button border-2 rounded-lg p-8">
-            <a href="" class="group relative w-64 h-64 overflow-hidden rounded-lg">
-                <img src="https://placehold.co/800x400/3b82f6/ffffff?text=Design+Portfolio" alt="Design Portfolio"
-                    class="h-full w-full object-cover transition duration-300 ease-out motion-safe:group-hover:scale-105">
-                <span
-                    class="pointer-events-none absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-sm font-semibold text-white transition duration-300 ease-out motion-safe:translate-y-3 motion-safe:opacity-0 motion-safe:group-hover:translate-y-0 motion-safe:group-hover:opacity-100">
-                    Placeholder title
-                </span>
-            </a>
-            <a href="" class="group relative w-64 h-64 overflow-hidden rounded-lg">
-                <img src="https://placehold.co/800x400/3b82f6/ffffff?text=Design+Portfolio" alt="Design Portfolio"
-                    class="h-full w-full object-cover transition duration-300 ease-out motion-safe:group-hover:scale-105">
-                <span
-                    class="pointer-events-none absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-sm font-semibold text-white transition duration-300 ease-out motion-safe:translate-y-3 motion-safe:opacity-0 motion-safe:group-hover:translate-y-0 motion-safe:group-hover:opacity-100">
-                    Placeholder title
-                </span>
-            </a>
-            <a href="" class="group relative w-64 h-64 overflow-hidden rounded-lg">
-                <img src="https://placehold.co/800x400/3b82f6/ffffff?text=Design+Portfolio" alt="Design Portfolio"
-                    class="h-full w-full object-cover transition duration-300 ease-out motion-safe:group-hover:scale-105">
-                <span
-                    class="pointer-events-none absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-sm font-semibold text-white transition duration-300 ease-out motion-safe:translate-y-3 motion-safe:opacity-0 motion-safe:group-hover:translate-y-0 motion-safe:group-hover:opacity-100">
-                    Placeholder title
-                </span>
-            </a>
-            <a href="" class="group relative w-64 h-64 overflow-hidden rounded-lg">
-                <img src="https://placehold.co/800x400/3b82f6/ffffff?text=Design+Portfolio" alt="Design Portfolio"
-                    class="h-full w-full object-cover transition duration-300 ease-out motion-safe:group-hover:scale-105">
-                <span
-                    class="pointer-events-none absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-sm font-semibold text-white transition duration-300 ease-out motion-safe:translate-y-3 motion-safe:opacity-0 motion-safe:group-hover:translate-y-0 motion-safe:group-hover:opacity-100">
-                    Placeholder title
-                </span>
-            </a>
-        </div>
 
-    </div>
-@endsection
+
+        <div class="flex flex-row flex-wrap items-center gap-4 justify-center border-button border-2 rounded-lg p-8">
+            @foreach ($posts as $post)
+                <a href="/services/it/{{ $post['slug'] }} " class="group relative w-64 h-64 overflow-hidden rounded-lg">
+                    <img src="https://placehold.co/800x400/3b82f6/ffffff?text={{ $post['imgUrl'] }}"
+                        alt="{{ $post['title'] }}"
+                        class="h-full w-full object-cover transition duration-300 ease-out motion-safe:group-hover:scale-105">
+                    <span
+                        class="pointer-events-none absolute inset-x-0 bottom-0 bg-black/60 px-3 py-2 text-sm font-semibold text-white transition duration-300 ease-out motion-safe:translate-y-3 motion-safe:opacity-0 motion-safe:group-hover:translate-y-0 motion-safe:group-hover:opacity-100">
+                        {{ $post['title'] }}
+                    </span>
+                </a>
+            @endforeach
+        </div>
+    @endsection
