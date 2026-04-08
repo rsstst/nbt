@@ -1,4 +1,4 @@
-<nav class="bg-secondary text-white">
+<nav class="bg-secondary text-white fixed top-0 left-0 right-0 z-50 w-full">
     <div class="flex items-center justify-between px-8 py-4">
         <div class="shrink-0">
             <img src="https://placehold.co/120x75/red/white?text=Logo+Placeholder" alt="Logo">
@@ -6,9 +6,9 @@
 
         {{-- Desktop --}}
         <div class="hidden md:flex md:space-x-8">
-            <a href="/" class="hover:text-gray-300 transition-colors">Beranda</a>
+            <a href="/" class="hover:text-link-hover transition-colors">Beranda</a>
             <div class="relative group pb-2">
-                <span class="inline-flex items-center gap-2 hover:text-gray-300 transition-colors hover:cursor-pointer">
+                <span class="inline-flex items-center gap-2 hover:text-link-hover transition-colors hover:cursor-pointer">
                     Layanan
                     <span class="inline-block text-xs">▾</span>
                 </span>
@@ -17,13 +17,13 @@
                     role="menu"
                     aria-label="Layanan submenu"
                 >
-                    <a href="/services/it" class="block px-4 py-2 hover:text-gray-300 transition-colors" role="menuitem">IT</a>
-                    <a href="/services/design" class="block px-4 py-2 hover:text-gray-300 transition-colors" role="menuitem">Desain</a>
+                    <a href="/services/it" class="block px-4 py-2 hover:text-link-hover transition-colors" role="menuitem">IT</a>
+                    <a href="/services/design" class="block px-4 py-2 hover:text-link-hover transition-colors" role="menuitem">Desain</a>
                 </div>
             </div>
 
             <div class="relative group pb-2">
-                <span class="inline-flex items-center gap-2 hover:text-gray-300 transition-colors hover:cursor-pointer">
+                <span class="inline-flex items-center gap-2 hover:text-link-hover transition-colors hover:cursor-pointer">
                     Portfolio
                     <span class="inline-block text-xs">▾</span>
                 </span>
@@ -33,13 +33,13 @@
                     role="menu"
                     aria-label="Portfolio submenu"
                 >
-                    <a href="/portfolio/it" class="block px-4 py-2 hover:text-gray-300 transition-colors" role="menuitem">IT</a>
-                    <a href="/portfolio/design" class="block px-4 py-2 hover:text-gray-300 transition-colors" role="menuitem">Desain</a>
+                    <a href="/portfolio/it" class="block px-4 py-2 hover:text-link-hover transition-colors" role="menuitem">IT</a>
+                    <a href="/portfolio/design" class="block px-4 py-2 hover:text-link-hover transition-colors" role="menuitem">Desain</a>
                 </div>
             </div>
 
-            <a href="/contact" class="hover:text-gray-300 transition-colors">Kontak</a>
-            <a href="/about" class="hover:text-gray-300 transition-colors">Tentang Kami</a>
+            <a href="/contact" class="hover:text-link-hover transition-colors">Kontak</a>
+            <a href="/about" class="hover:text-link-hover transition-colors">Tentang Kami</a>
         </div>
 
         {{-- Mobile --}}
@@ -56,12 +56,12 @@
 
     <div id="mobile-menu" class="hidden md:hidden px-8 pb-4">
         <div class="flex flex-col space-y-4">
-            <a href="/" class="hover:text-gray-300 transition-colors">Beranda</a>
+            <a href="/" class="hover:text-link-hover transition-colors">Beranda</a>
             <div class="flex flex-col gap-2">
                 <button
                     id="mobile-services-menu-button"
                     type="button"
-                    class="inline-flex items-center justify-between hover:text-gray-300 transition-colors"
+                    class="inline-flex items-center justify-between hover:text-link-hover transition-colors"
                     aria-haspopup="true"
                     aria-expanded="false"
                 >
@@ -69,8 +69,8 @@
                     <span class="inline-block text-xs">▾</span>
                 </button>
                 <div id="mobile-services-menu" class="hidden pl-4 space-y-2">
-                    <a href="/services/it" class="block hover:text-gray-300 transition-colors">IT</a>
-                    <a href="/services/design" class="block hover:text-gray-300 transition-colors">Desain</a>
+                    <a href="/services/it" class="block hover:text-link-hover transition-colors">IT</a>
+                    <a href="/services/design" class="block hover:text-link-hover transition-colors">Desain</a>
                 </div>
             </div>
 
@@ -78,7 +78,7 @@
                 <button
                     id="mobile-portfolio-menu-button"
                     type="button"
-                    class="inline-flex items-center justify-between hover:text-gray-300 transition-colors"
+                    class="inline-flex items-center justify-between hover:text-link-hover transition-colors"
                     aria-haspopup="true"
                     aria-expanded="false"
                 >
@@ -86,13 +86,13 @@
                     <span class="inline-block text-xs">▾</span>
                 </button>
                 <div id="mobile-portfolio-menu" class="hidden pl-4 space-y-2">
-                    <a href="/portfolio/it" class="block hover:text-gray-300 transition-colors">IT</a>
-                    <a href="/portfolio/design" class="block hover:text-gray-300 transition-colors">Desain</a>
+                    <a href="/portfolio/it" class="block hover:text-link-hover transition-colors">IT</a>
+                    <a href="/portfolio/design" class="block hover:text-link-hover transition-colors">Desain</a>
                 </div>
             </div>
 
-            <a href="/contact" class="hover:text-gray-300 transition-colors">Kontak</a>
-            <a href="/about" class="hover:text-gray-300 transition-colors">Tentang Kami</a>
+            <a href="/contact" class="hover:text-link-hover transition-colors">Kontak</a>
+            <a href="/about" class="hover:text-link-hover transition-colors">Tentang Kami</a>
         </div>
     </div>
 </nav>
