@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
 </head>
-<body class="overflow-x-hidden">
+<body class="min-h-screen overflow-x-hidden flex flex-col">
 
     @include('layout.navbar')
 
-    <main id="page-content" style="padding-top: var(--navbar-height, 0px);">
+    <main id="page-content" class="flex-1" style="padding-top: var(--navbar-height, 0px);">
         @yield('content')
     </main>
 

@@ -14,10 +14,10 @@
 
 
 
-        <div class="flex flex-row flex-wrap items-center gap-4 justify-center border-button border-2 rounded-lg p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center border-button border-2 rounded-lg p-8">
             @foreach ($posts as $post)
                 <div class="bg-primary rounded-lg shadow-md overflow-hidden group relative">
-                    <img src="https://placehold.co/400x300" alt="Project 1" class="w-full h-48 object-cover">
+                    <img src="https://placehold.co/400x300" alt="Project 1" class="w-full h-76 object-cover">
                     <a href="/portfolio/it/{{ $post['slug'] }}" class="absolute inset-0 block">
                         <div
                             class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
