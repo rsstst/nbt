@@ -8,7 +8,7 @@
             </h1>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-4/5">
             @foreach ($posts as $p)
                 @php
                     $benefits = data_get($p, 'benefits', []);
@@ -18,11 +18,11 @@
                     <h2 class=" min-h-16 w-full uppercase leading-tight text-2xl font-bold">
                         {{ data_get($p, 'title') }}
                     </h2>
-                    <p class="min-h-16 text-justify">{{ data_get($p, 'description') }}</p>
+                    <p class="sm:mt-0 mt-4 min-h-16 text-justify">{{ data_get($p, 'description') }}</p>
 
                     <div class="h-px bg-button my-4"></div>
 
-                    <h3 class="min-h-8">Benefits</h3>
+                    <h3 class="min-h-8 font-bold">Benefit</h3>
 
                     <ul class="space-y-4 mb-8">
                         @foreach ($benefits as $benefit)
