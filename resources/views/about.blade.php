@@ -12,7 +12,7 @@
         </h1>
     </div>
 
-    <div class="flex flex-col max-w-7xl w-full px-4 sm:px-8 md:px-12 lg:px-24 py-8 md:py-12 lg:py-16 space-y-12 md:space-y-16">
+    <div class="flex flex-col max-w-7xl w-full px-4 sm:px-8 md:px-12 lg:px-24 space-y-12 md:space-y-16">
         <div class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 w-full items-center">
             <img src="https://placehold.co/600x400" alt="NARU BRANCH TECH Studio" class="w-full md:w-1/2 h-auto object-cover rounded-lg shadow-lg">
             <p class="text-sm sm:text-base lg:text-lg text-justify md:text-left flex-1 leading-relaxed">

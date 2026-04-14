@@ -16,6 +16,10 @@
     --color-button: #ff6347;
 }
 
+:root {
+    --navbar-height: 0px;
+}
+
 body {
     background-color: var(--color-primary);
     color: white;

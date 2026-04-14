@@ -1,9 +1,5 @@
 @extends('layout.layout')
 
-<head>
-    <title>{{ $title }}</title>
-</head>
-
 @section('content')
     <div class="flex flex-col justify-center items-center w-full px-4 sm:px-6 lg:px-8 py-8 overflow-hidden">
         <div class="text-center mb-8">
@@ -12,23 +8,35 @@
             </h1>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            @foreach ($posts as $p)
+                @php
+                    $benefits = data_get($p, 'benefits', []);
+                    $benefits = is_array($benefits) ? $benefits : [];
+                @endphp
+                <article class="border border-button rounded-2xl p-6 flex flex-col h-full">
+                    <h2 class=" min-h-16 w-full uppercase leading-tight text-2xl font-bold">
+                        {{ data_get($p, 'title') }}
+                    </h2>
+                    <p class="min-h-16 text-justify">{{ data_get($p, 'description') }}</p>
 
+                    <div class="h-px bg-button my-4"></div>
 
-        <div class="flex flex-row flex-wrap items-center gap-4 justify-center border-button border-2 rounded-lg p-8">
-            @foreach ($posts as $post)
-                <div class="bg-primary rounded-lg shadow-md overflow-hidden group relative">
-                    <img src="https://placehold.co/400x300" alt="Project 1" class="w-full h-48 object-cover">
-                    <a href="/services/design/{{ $post['slug'] }}" class="absolute inset-0 block">
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        </div>
-                        <div
-                            class="absolute inset-0 p-4 flex flex-col justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <h3 class="text-xl font-semibold mb-2 text-white">{{ $post['title'] }}</h3>
-                            <p class="text-gray-200">{{ $post['description'] }}</p>
-                        </div>
-                    </a>
-                </div>
+                    <h3 class="min-h-8">Benefits</h3>
+
+                    <ul class="space-y-4 mb-8">
+                        @foreach ($benefits as $benefit)
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-button mt-1"></i>
+                                <span>{{ $benefit }}</span>
+                            </li>
+                        @endforeach
+                        </ul>
+
+                        <a href=""
+                            class="mt-auto inline-flex items-center justify-center min-w-40 min-h-11 px-4 py-2 bg-button hover:bg-button-hover text-black border-2 font-semibold rounded-lg transition-colors w-full sm:w-auto text-center">Hubungi Kami</a>
+                </article>
             @endforeach
         </div>
-    @endsection
+    </div>
+@endsection

@@ -12,7 +12,7 @@
         </h1>
     </div>
 
-    <div class="flex flex-col w-full max-w-7xl px-4 sm:px-8 md:px-12 lg:px-24 py-8 md:py-12 lg:py-16">
+    <div class="flex flex-col w-full max-w-7xl px-4 sm:px-8 md:px-12 lg:px-24">
         <div class="flex flex-col lg:flex-row gap-6 md:gap-8">
             <div class="border-button border-2 p-6 md:p-8 rounded-lg shadow-lg w-full lg:w-auto lg:shrink-0">
                 <h2 class="text-xl sm:text-2xl font-semibold mb-4">Hubungi Kami</h2>

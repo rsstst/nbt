@@ -32,22 +32,106 @@ Route::get('/portfolio/design', function () {
     return view('details.portfolio.design', ['title' => 'Portfolio Desain', 'posts' => [['title' => 'a', 'imgUrl' => 'a', 'description' => 'a', 'slug' => 'a', 'postType' => 'a']]]);
 });
 Route::get('/portfolio/it/{post:slug}', function (pf $post) {
-    return view('details.it-detail', ['title' => 'Detail Portfolio IT', 'post' => $post]);
+    return view('details.it-detail', ['title' => 'Detail Portfolio IT', 'posts' => $post]);
 });
 Route::get('/portfolio/design/{post:slug}', function (pf $post) {
-    return view('details.design-detail', ['title' => 'Detail Portfolio Desain', 'post' => $post]);
+    return view('details.design-detail', ['title' => 'Detail Portfolio Desain', 'posts' => $post]);
 });
 
 // service detail
 Route::get('/services/it', function () {
-    return view('details.services.it', ['title' => 'Layanan IT', 'posts' => [['title' => 'a', 'imgUrl' => 'a', 'description' => 'a', 'slug' => 'a', 'postType' => 'a']]]);
+    $posts = [
+        [
+            'title' => 'LOREM IPSUM ONE',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+            'slug' => 'lorem-ipsum-one',
+            'benefits' => [
+                'Lorem ipsum dolor sit amet',
+                'Consectetur adipiscing elit',
+                'Sed do eiusmod tempor',
+            ],
+        ],
+        [
+            'title' => 'LOREM IPSUM TWO',
+            'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+            'slug' => 'lorem-ipsum-two',
+            'benefits' => [
+                'Ut enim ad minim veniam',
+                'Quis nostrud exercitation',
+                'Ullamco laboris nisi',
+            ],
+        ],
+        [
+            'title' => 'LOREM IPSUM THREE',
+            'description' => 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'slug' => 'lorem-ipsum-three',
+            'benefits' => [
+                'Duis aute irure dolor',
+                'Reprehenderit in voluptate',
+                'Cillum dolore eu fugiat',
+            ],
+        ],
+    ];
+
+    return view('details.services.it', ['title' => 'Layanan IT', 'posts' => $posts]);
 });
 Route::get('/services/design', function () {
-    return view('details.services.design', ['title' => 'Layanan Desain', 'posts' => [['title' => 'a', 'imgUrl' => 'a', 'description' => 'a', 'slug' => 'a', 'postType' => 'a']]]);
+    $posts = [
+        [
+            'title' => 'LOREM DESIGN ONE',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+            'slug' => 'lorem-design-one',
+            'benefits' => [
+                'Lorem ipsum dolor sit amet',
+                'Consectetur adipiscing elit',
+                'Sed do eiusmod tempor',
+            ],
+        ],
+        [
+            'title' => 'LOREM DESIGN TWO',
+            'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+            'slug' => 'lorem-design-two',
+            'benefits' => [
+                'Ut enim ad minim veniam',
+                'Quis nostrud exercitation',
+                'Ullamco laboris nisi',
+            ],
+        ],
+        [
+            'title' => 'LOREM DESIGN THREE',
+            'description' => 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'slug' => 'lorem-design-three',
+            'benefits' => [
+                'Duis aute irure dolor',
+                'Reprehenderit in voluptate',
+                'Cillum dolore eu fugiat',
+            ],
+        ],
+    ];
+
+    return view('details.services.design', ['title' => 'Layanan Desain', 'posts' => $posts]);
 });
+
 Route::get('/services/it/{post:slug}', function (svc $post) {
-    return view('details.it-detail', ['title' => 'Detail Layanan IT', 'post' => $post]);
+    return view('details.it-detail', ['title' => 'Detail Layanan IT', 'posts' => $post]);
 });
 Route::get('/services/design/{post:slug}', function (svc $post) {
-    return view('details.design-detail', ['title' => 'Detail Layanan Desain', 'post' => $post]);
+    return view('details.design-detail', ['title' => 'Detail Layanan Desain', 'posts' => $post]);
 });
+
+// Route::get('/services/it', function () {
+//         $posts = svc::query()
+//         ->whereIn('postType', ['it', 'IT'])
+//         ->orderBy('postID')
+//         ->get();
+
+//     return view('details.services.it', ['title' => 'Layanan IT', 'posts' => $posts]);
+// });
+// Route::get('/services/design', function () {
+//     $posts = svc::query()
+//         ->whereIn('postType', ['design', 'Design'])
+//         ->orderBy('postID')
+//         ->get();
+
+//     return view('details.services.design', ['title' => 'Layanan Desain', 'posts' => $posts]);
+// });

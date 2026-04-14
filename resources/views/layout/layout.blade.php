@@ -10,9 +10,24 @@
 <body class="overflow-x-hidden">
 
     @include('layout.navbar')
-    
-    @yield('content')
+
+    <main id="page-content" style="padding-top: var(--navbar-height, 0px);">
+        @yield('content')
+    </main>
 
     @include('layout.footer')
+
+    <script>
+        (function () {
+            function syncNavbarOffset() {
+                const navbar = document.getElementById('site-navbar');
+                const navbarHeight = navbar ? navbar.offsetHeight : 0;
+                document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+            }
+
+            document.addEventListener('DOMContentLoaded', syncNavbarOffset);
+            window.addEventListener('resize', syncNavbarOffset);
+        })();
+    </script>
 </body>
 </html>
