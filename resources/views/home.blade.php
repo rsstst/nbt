@@ -120,7 +120,7 @@
                     </div>
                     <div class="mt-8">
                         <div class="flex justify-center">
-                            <a href="#"
+                            <a href="/portfolio"
                                 class="inline-flex items-center justify-center min-w-40 min-h-11 px-8 py-3 bg-button hover:bg-button-hover text-black border-2 font-semibold rounded-lg transition-colors">
                                 Lihat Semua
                             </a>
@@ -140,7 +140,7 @@
                             <h3 class="text-xl font-semibold mb-2">Desain Grafis</h3>
                             <p class="text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
                                 doloremque?</p>
-                            <a href=""
+                            <a href="/services/design"
                                 class="inline-flex items-center justify-center min-w-40 min-h-11 mt-4 px-4 py-2 bg-button hover:bg-button-hover text-black border-2 font-semibold rounded-lg transition-colors w-full sm:w-auto text-center">Selengkapnya</a>
                         </div>
                         <!-- Service Item -->
@@ -148,7 +148,7 @@
                             <h3 class="text-xl font-semibold mb-2">Pengembangan Web</h3>
                             <p class="text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
                                 doloremque?</p>
-                            <a href=""
+                            <a href="/services/it"
                                 class="inline-flex items-center justify-center min-w-40 min-h-11 mt-4 px-4 py-2 bg-button hover:bg-button-hover text-black border-2 font-semibold rounded-lg transition-colors w-full sm:w-auto text-center">Selengkapnya</a>
                         </div>
                     </div>

@@ -17,8 +17,18 @@ Route::get('/contact', function () {
 Route::get('/services', function () {
     return view('services', ['title' => 'Layanan']);
 });
+
 Route::get('/portfolio', function () {
-    return view('portfolio', ['title' => 'Portfolio']);
+    return view('portfolio', ['title' => 'Portfolio',
+    'itPosts' => pf::query()
+        ->where('postType', 'IT')
+        ->orderBy('postID')
+        ->get(),
+    'designPosts' => pf::query()
+        ->where('postType', 'Design')
+        ->orderBy('postID')
+        ->get(),
+        ]);
 });
 
 // 'title', 'imgUrl', 'description', 'slug', 'postType'

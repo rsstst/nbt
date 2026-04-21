@@ -1,8 +1,8 @@
 <nav id="site-navbar" class="bg-secondary text-white fixed top-0 left-0 right-0 z-50 w-full">
     <div class="flex items-center justify-between px-8 py-4">
-        <div class="shrink-0">
+        <a class="shrink-0" href="/">
             <img src="https://placehold.co/120x75/red/white?text=Logo+Placeholder" alt="Logo">
-        </div>
+        </a>
 
         {{-- Desktop --}}
         <div class="hidden md:flex md:space-x-8">

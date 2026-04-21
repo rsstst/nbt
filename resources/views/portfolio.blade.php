@@ -12,29 +12,45 @@
             </h1>
         </div>
 
-        <div class="flex flex-col justify-center items-center">
-            <div>
-                <div>
-                    <h1>IT</h1>
-                    <a href="">Company Profile</a>
-                    <a href="">E-Commerce</a>
-                </div>
-                <div>
-
-                </div>
+        <div class="flex flex-col gap-16">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center border-button border-2 rounded-lg p-8">
+                @foreach ($itPosts as $post)
+                    <div class="bg-primary rounded-lg shadow-md overflow-hidden group relative">
+                        <img src="https://placehold.co/400x300" alt="Project 1" class="w-full h-76 object-cover">
+                        <a href="/portfolio/it/{{ $post['slug'] }}" class="absolute inset-0 block">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            </div>
+                            <div
+                                class="absolute inset-0 p-4 flex flex-col justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                <h3 class="text-xl font-semibold mb-2 text-white">{{ $post['title'] }}</h3>
+                                <p class="text-gray-200">{{ $post['description'] }}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
 
-            <div>
-                <div>
-                    <h1>Design</h1>
-                    <a href="">Desain Grafis</a>
-                    <a href="">Editing Foto & Video</a>
-                    <a href="">Ilustrasi</a>
-                </div>
-                <div>
-
-                </div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center border-button border-2 rounded-lg p-8">
+                @foreach ($designPosts as $post)
+                    <div class="bg-primary rounded-lg shadow-md overflow-hidden group relative">
+                        <img src="https://placehold.co/400x300" alt="Project 1" class="w-full h-76 object-cover">
+                        <a href="/portfolio/design/{{ $post['slug'] }}" class="absolute inset-0 block">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            </div>
+                            <div
+                                class="absolute inset-0 p-4 flex flex-col justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                <h3 class="text-xl font-semibold mb-2 text-white">{{ $post['title'] }}</h3>
+                                <p class="text-gray-200">{{ $post['description'] }}</p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
+
     </div>
 @endsection

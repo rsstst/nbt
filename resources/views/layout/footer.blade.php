@@ -1,10 +1,9 @@
 <footer>
     <div class="bg-secondary border border-transparent border-t-button text-white py-8">
-        <div class="flex flex-row border border-white w-full p-8">
+        <div class="flex flex-row w-full p-8">
             <div class="flex flex-col w-[80%]">
-                <a href="" class="h-full"><img src="https://placehold.co/120x75/red/white?text=Logo+Placeholder"
+                <a href="" class="w-fit h-full"><img src="https://placehold.co/256x128/red/white?text=Logo+Placeholder"
                         alt="Narubrancht    ech"></a>
-                <p class="text-sm">&copy; {{ date('Y') }} My Website. All rights reserved.</p>
             </div>
             <div class=" w-[25%]">
                 <p class="mb-4">Explore</p>
@@ -30,5 +29,7 @@
                 </ul>
             </div>
         </div>
+
+        <p class="text-sm text-center text-gray-400">&copy; {{ date('Y') }} Naru Branch Tech. All rights reserved.</p>
     </div>
 </footer>
